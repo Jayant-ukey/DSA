@@ -1,5 +1,7 @@
 package binary_search.leetcode;
 
+// 69. Sqrt(x) :-  https://leetcode.com/problems/sqrtx/description/
+
 public class Prob1Sqrtx {
 
 	 // Approach 1 : Brute Force
