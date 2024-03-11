@@ -16,7 +16,7 @@ package binary_search.notes.day2;
 
 /*	APPROACH
 	- Here, we simply use linear search approach to find binary searchable element.
-	- In binary search we are checking wheter target elemet is foundable or not.
+	- In binary search we are checking whether target element is foundable or not.
 	- So, here we can pass every element as a target to binary search function to check it is searchable or not.
 */
 
