@@ -1,5 +1,6 @@
 package hash_map.day2;
 
+import java.util.HashMap;
 
 //  https://leetcode.com/problems/subarray-sum-equals-k/description/
 public class P1SubarraySum {
@@ -39,6 +40,35 @@ public class P1SubarraySum {
                 
             }
             return ans;
+        }
+	    
+	    
+	    
+	    //O(n)
+	    //Before seeing this solution please refer problem P2LongestSubArr
+        public int subarraySum3(int[] nums, int k) {
+            HashMap<Integer, Integer> hmap = new HashMap<>();
+            int sum=0, count=0;
+            hmap.put(0,1); // storing 0 first in hash-map, because rem - k=0, and in that case we need to increase count
+            for(int i=0; i<nums.length; i++){
+                sum += nums[i];
+                
+                int rem = sum - k;
+                if(hmap.containsKey(rem)){
+                    count += hmap.get(rem);
+                }
+
+                if(hmap.containsKey(sum)){
+                    int cntMap = hmap.get(sum);
+                    hmap.put(sum,cntMap+1); //If key is already present then increase count
+                }
+                else{
+                    hmap.put(sum, 1); //Here we are storing count instead of index 
+                    // In case any confusion dry run for test case nums = [0,0,0,0,0,0,0,0,0,0] , k=0 ->o/p=55
+                }
+
+            }
+            return count;
         }
 	    
 	    public static void main(String[] args) {
