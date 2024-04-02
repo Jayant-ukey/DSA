@@ -1,0 +1,89 @@
+hashmap
+
+- Ordering is not maintain.
+- All the operations work in O(1) time complexity.
+
+
+Hashmap<String, Integer> hm = new HashMap<>(); //Declaration
+
+Ex:
+India - 125
+China - 200
+Pak - 40
+US - 20
+
+1. hm.put(key, value)
+	- It use to create new key aong with value.
+	- It also used to update the value of that particular key element.
+	
+	ex :1. hm.put(India, 140); //updating value
+			sout(hm)  // To print
+			
+	o/p :   India - 140
+			China - 200
+			Pak - 40
+			US - 20
+	
+	2. hm.put(Nigeria, 10)
+	
+	o/p :   India - 140
+			China - 200
+			Pak - 40
+			US - 20
+			Nigeria - 10
+			
+			
+--------------------------------------------------------
+
+2. hm.get(key)
+	- Used to get the value of particular key.
+	- If key is not present then return null.
+	
+	ex : 1. hm.get("India") // 140
+		 2. hm.get("Austrelia") // null
+		 
+--------------------------------------------------------
+
+3. hm.containsKey(key)
+
+	- Return true if key is present
+	- Return false if key is not there.
+	
+	hm.containsKey("India")  //true
+	hm.containsKey("Kuwait") // false
+	
+--------------------------------------------------------
+
+4. hm.keySet() 
+
+	- Return all the keys present in hashmap.
+	
+	for(String key : hm.keySet()){
+		Integer val = hm.getKey(key);
+		sout(key +" "+val);
+	}
+	
+	Above loop is to iterate over all key and print key - value.
+	
+	- thi sfunction eturns key in set format. so we can stores key in Set.
+	
+	ex : Set<String> keys = hm.keySet();
+	
+-------------------------------------------------------
+5. HashMap remove(key) 
+
+HashMap. remove() is an inbuilt method of HashMap class and is used to remove the mapping of any particular key from the map.
+
+
+------------------------------------------------------------
+6. hm.getOrDefault(key, 99)
+
+- If key is not there and want to get particular value instead of that then also it's possible.
+ex: hm.get("England", 99) // 99
+
+
+
+
+
+
+
