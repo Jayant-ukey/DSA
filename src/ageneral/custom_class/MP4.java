@@ -1,6 +1,7 @@
 package ageneral.custom_class;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 import ageneral.generic_method.MyUtils;
 
@@ -24,6 +25,10 @@ public class MP4 {
 
 		MyUtils.iterateList(songList);
 		
+		System.out.println("\nAfter sorting");
+		Collections.sort(songList);
+		MyUtils.iterateList(songList);
+
 	}
 
 }
